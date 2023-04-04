@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport", content="width=device-width ,initial-scale=1.0">
+    <title>L&M TALENT GROUP</title>
+    <style>
+*{
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-family: verdana;
+box-sizing: border-box;
+z-index: 1;
+background-color: rgb(240, 240, 240);
+  }
+  .tc {
+  
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: left;
+    font-family: verdana;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    line-height: 30px;
+  
+  }
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+
+    </style>
+
+  </head>
+ 
+  <body>
+    <h1 style="text-align: center;">L&M TALENT GROUP</h1>
+    <form class="tc">
+<p> 
+
+  Welcome to the L&M Talent Group free Talent Showcasing Group website. We are excited to have you as a user of our website.
+   <strong>Please read the following terms and conditions carefully before using our services</strong>. By using our services, 
+   you agree to these terms and conditions. 
+
+ <h3>Use of Website</h3>
+  The L&M Talent Group free Talent Showcasing Group website is intended for personal, non-commercial use only. You may not use
+   our website for any commercial purposes or in any way that violates any applicable laws or regulations. 
+  
+ <h3>User Content </h3>
+  You are solely responsible for any content that you upload, publish, or otherwise make available on our website. By uploading,
+   publishing, or making available any content on our website, you grant L&M Talent Group a non-exclusive, transferable, 
+   sub-licensable, royalty-free, worldwide license to use, copy, modify, create derivative works based on, distribute, 
+   publicly display, publicly perform, and otherwise exploit in any manner such content in all formats and distribution 
+   channels now known or hereafter devised (including in connection with the L&M Talent Group free Talent Showcasing Group 
+   website and L&M Talent Group’s business and on third-party sites and services), without further notice to or consent from you, 
+   and without the requirement of payment to you or any other person or entity. 
+  
+<h3>Intellectual Property</h3>
+  The L&M Talent Group free Talent Showcasing Group website and all content and materials on the website, including but not 
+  limited to text, graphics, logos, images, and software, are the property of L&M Talent Group or its licensors and are protected 
+  by copyright, trademark, and other intellectual property laws. You may not use, copy, modify, or distribute any content or 
+  materials on our website without L&M Talent Group's prior written consent.
+  
+<h3>  Privacy Policy</h3>
+  L&M Talent Group's privacy policy applies to your use of our website and is incorporated into these terms and conditions 
+  by reference. Please review our privacy policy before using our website.
+  
+<h3>  Disclaimer of Warranties</h3>
+  Our website and all content and materials on the website are provided "as is" and without warranties of any kind, whether 
+  express or implied. L&M Talent Group disclaims all warranties, including but not limited to implied warranties of merchantability,
+   fitness for a particular purpose, and non-infringement.
+  
+<h3>  Limitation of Liability</h3>
+  L&M Talent Group will not be liable for any damages or losses, including direct, indirect, consequential, or incidental damages,
+   arising out of or in connection with the use of our website or any content or materials on the website, even if L&M Talent Group
+    has been advised of the possibility of such damages.
+  
+ <h3> Governing Law</h3>
+  These terms and conditions will be governed by and construed in accordance with the laws of the state of California.
+  
+  Amendments
+  L&M Talent Group may amend these terms and conditions at any time by posting the amended terms on our website. 
+  Your continued use of our website after the posting of the amended terms constitutes your acceptance of the amended terms.
+  
+<h3>  Termination</h3>
+  L&M Talent Group may terminate your access to our website at any time, with or without cause, in its sole discretion.
+  
+<h3> Entire Agreement</h3>
+  These terms and conditions constitute the entire agreement between you and L&M Talent Group regarding the use of our 
+  website and supersede all prior or contemporaneous communications and proposals, whether oral or written, between you 
+  and L&M Talent Group.
+  
+  If you have any questions about these terms and conditions, please contact us.
+  
+
+</p>
+
+
+    </form>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+  </body>
+</html>

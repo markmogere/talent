@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-family: verdana;
+box-sizing: border-box;
+z-index: 1;
+background-color: rgb(240, 240, 240);
+  }
+  .Reg-form {
+  
+    width: 250px;
+    margin: 120px auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: left;
+    font-family: verdana;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+  
+  }.hd{
+    padding: 4px 6px;
+    border-radius: 4px;
+    border: 1px solid lightgrey;
+    width: 200px;
+    
+  }.check{
+    margin-top: 10px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+  }.btn{
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+    width: 100px;
+  }.hd1{
+
+  width: 300px;
+   
+  
+
+
+  }.crt{
+    text-decoration: none;
+  }
+.icons a{
+text-decoration: none;
+
+}
+.icons ion-icon{
+font-size: 30px;
+padding-left: 14px;
+padding-top: 5px;
+transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+color: #ff7200;
+}input:focus {
+    outline: none;
+    border: none;}

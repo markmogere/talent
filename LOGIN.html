@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport", content="width=device-width ,initial-scale=1.0">
+    <title>L&M TALENT GROUP</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        font-family: verdana;
+    box-sizing: border-box;
+    z-index: 1;
+    background-color: rgb(240, 240, 240);
+      }
+      .login-form {
+      
+        width: 600px;
+        margin: 20px auto;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        align-items: center;
+        justify-content: left;
+        font-family: verdana;
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+      }
+      .form-column {
+        width: 30%;
+        padding: 20px;
+        box-sizing: border-box;
+        position: relative;
+      }.hd{
+        padding: 4px 6px;
+        border-radius: 4px;
+        border: 1px solid lightgrey;
+        width: 200px;
+        
+      }.check{
+        margin-top: 10px;
+        border: 1px solid lightgray;
+        cursor: pointer;
+      }.btn{
+        padding: 10px 12px;
+        border-radius: 4px;
+        border: 1px solid lightgray;
+        width: 100px;
+       
+
+
+      }.crt{
+        text-decoration: none;
+      }
+.icons a{
+    text-decoration: none;
+    
+}
+.icons ion-icon{
+    font-size: 30px;
+    padding-left: 14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+    color: #ff7200;
+}input:focus {
+        outline: none;
+        border: none;
+      }
+  #cookies-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f1f1f1;
+    padding: 20px;
+    display: none;
+  }.pp{
+    color: red;
+  }.cook{
+    padding: 10px 12px;
+        border-radius: 4px;
+        border: 1px solid lightgray;
+        width: 100px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+
+  }
+
+
+    </style>
+  </head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <body>
+    <h1 style="text-align: center;">L&M TALENT GROUP</h1>
+    <form class="login-form">
+      <div class="form-column">
+        <h2>Login with</h2>
+        <div class="icons">
+          <a href="https://myaccount.google.com/?utm_source=sign_in_no_continue"><ion-icon name="logo-google"></ion-icon></a>
+      </div>
+      </div>
+    
+      <div class="form-column">
+        <h2>LOGIN</h2>
+        <label for="email"><i class="material-icons">email</i></label>
+        <input class="hd" type="email" id="email" name="email" placeholder="Email" required>
+        <label for="password"><i class="material-icons">lock</i></label>
+        <input class="hd" type="password" id="password" name="password" placeholder="Password" required> <br>
+        <input class="check" type="checkbox" id="myCheckbox" name="myCheckbox" value="isChecked" >
+        <label for="myCheckbox">Remember Me</label> <br>
+        <p> <strong>Forgot Password?</strong>  </p>
+        <button class="btn" type="submit" id="login">LOGIN</button>
+
+        <p><strong>Call or Whatsapp:</strong>0742584191 <br> <br> 
+          <strong>Email:</strong>markorori1997@gmail.com</p> <br>
+          <p>Don't have an account? <a href="SIGNUP.html">Sign Up</a> </p>
+      </div>
+      
+    </form>
+
+    <div id="cookies-popup">
+      <p class="pp">This website uses cookies to ensure you get the best experience on our website. By using our website, you agree to our use of cookies.</p>
+      <button class="cook" onclick="acceptCookies()">Accept</button>
+    </div>
+    
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      }
+      
+      function acceptCookies() {
+        setCookie("cookies_accepted", "true", 365);
+        var cookiesPopup = document.getElementById("cookies-popup");
+        cookiesPopup.style.display = "none";
+      }
+    </script>
+  <script>
+    function getCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(";");
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == " ") c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+    
+    function checkCookiesAccepted() {
+      var cookiesAccepted = getCookie("cookies_accepted");
+      if (cookiesAccepted == null) {
+        var cookiesPopup = document.getElementById("cookies-popup");
+        cookiesPopup.style.display = "block";
+      }
+    }
+    window.onload = checkCookiesAccepted;
+  </script>
+    <script>
+      const emailInput = document.getElementById('email');
+      const passwordInput = document.getElementById('password');
+      const loginButton = document.getElementById('login');
+
+      emailInput.addEventListener('input', updateButtonState);
+      passwordInput.addEventListener('input', updateButtonState);
+
+      function updateButtonState() {
+        if (emailInput.value && passwordInput.value) {
+          loginButton.disabled = false;
+        } else {
+          loginButton.disabled = true;
+        }
+      }
+    </script>
+
+  </body>
+</html>

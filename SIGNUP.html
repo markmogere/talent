@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport", content="width=device-width ,initial-scale=1.0">
+    <title>L&M TALENT GROUP</title>
+
+  </head>
+  <link rel="stylesheet" href="SIGNUP.CSS">
+  <body>
+    <h1 style="text-align: center;">L&M TALENT GROUP</h1>
+    <form class="Reg-form" action="#" method="post" onsubmit="return checkPassword()">
+      
+
+        <input class="hd" type="email" id="email" name="email" placeholder="Enter your email address" required>
+    
+        <input class="hd" type="tel" id="phone" name="phone" placeholder="+254712345678" required pattern="\+254\d{9}" maxlength="13">
+     <div>
+   
+      <input class="hd" type="password" id="password" name="password" placeholder="Enter your password" required>
+    </div>
+    <div>
+ 
+      <input class="hd" type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+    </div>
+     <div>
+        <p>Password should be at least 8 characters long with atleast one  special symbol, uppercase, lowercase, and numeric a character.</p>
+      </div>
+      <input type="checkbox" id="terms" name="terms" disabled>
+        <label for="myCheckbox">I agree to L&M TALENT GROUP <a href="terms-conditions.html"> Terms & Conditions</a>   and the <a href="policy.html"> Privacy Policy</a></label> <br> <br>
+        <button class="btn" type="submit" id="submit" disabled>Submit</button>
+    </form>
+    <script>// Get the email, password, and checkbox elements
+      const emailInput = document.getElementById('email');
+      const passwordInput = document.getElementById('confirm-password');
+      const checkboxInput = document.getElementById('terms');
+      
+      // Add an event listener to the email and password inputs for changes
+      emailInput.addEventListener('input', toggleCheckbox);
+      passwordInput.addEventListener('input', toggleCheckbox);
+      
+      // Function to toggle the checkbox based on the email and password inputs
+      function toggleCheckbox() {
+        // If both inputs have values, enable the checkbox; otherwise, disable it
+        checkboxInput.disabled = (emailInput.value === '' || passwordInput.value === '');
+      }
+      </script>
+    <script>// Get the checkbox and submit button elements
+      const termsCheckbox = document.getElementById('terms');
+      const submitButton = document.getElementById('submit');
+      
+      // Add an event listener to the checkbox for changes
+      termsCheckbox.addEventListener('change', function() {
+        // If the checkbox is checked, enable the submit button; otherwise, disable it
+        submitButton.disabled = !termsCheckbox.checked;
+      });
+      </script>
+    <script>
+    
+    function checkPassword() {
+      let passwordInput = document.getElementById('password');
+      let password = passwordInput.value;
+    
+      // Password must be at least 8 characters long and contain special symbols, uppercase, lowercase, and numeric characters.
+      let passwordRegex = /^(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?])(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/;
+    
+      if (!passwordRegex.test(password)) {
+        alert('Password must be at least 8 characters long with special symbols, uppercase, lowercase, and numeric characters.');
+        passwordInput.focus();
+        return false;
+      }
+    
+      let confirmPasswordInput = document.getElementById('confirm-password');
+      let confirmPassword = confirmPasswordInput.value;
+    
+      if (password !== confirmPassword) {
+        alert('Passwords do not match.');
+        confirmPasswordInput.focus();
+        return false;
+      }
+    
+      return true;
+    }
+</script>    
+  </body>
+</html>
